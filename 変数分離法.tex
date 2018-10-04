@@ -1,0 +1,28 @@
+\documentclass[titlepage,dvipdfmx]{jsarticle}
+\usepackage[final,hiresbb]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\begin{document}
+\section{偏微分方程式、変数分離法}
+\subsection*{使い方}
+$f(x,y)=X(x)\cdot Y(y)$と表せる問題に対して用いられる
+\subsection*{例題を用いた解法}
+$\displaystyle \frac{\partial u(x,y)}{\partial x}=\frac{\partial u(x,y)}{\partial y}$\\ \\
+変数分離解　$u(x,y)=f(x)\cdot g(y)$とすると\\\\
+$\displaystyle \frac{\partial f(x)}{\partial x}g(y)=f(x)\frac{\partial g(y)}{\partial y}$\\ \\
+両辺を$f(x)\cdot g(y)$で割る\\
+
+$\displaystyle \frac{1}{f(x)}\cdot \frac{\partial f(x)}{\partial x}=\frac{1}{g(y)}\cdot \frac{\partial g(y)}{\partial y}$\\
+常に成り立つためには$\displaystyle \frac{1}{f(x)}\cdot \frac{\partial f(x)}{\partial x}=\frac{1}{g(y)}\cdot \frac{\partial g(y)}{\partial y}=k(定数)$が必要\\
+$\displaystyle \frac{1}{f(x)}\cdot \frac{\partial f(x)}{\partial x}=k$から\\\\
+$\displaystyle \ln f(x) =kx+C$\\
+同様にして\\
+$\displaystyle \ln g(y) =ky+C'$\\
+よって$f(x)=Ae^{kx},g(y)=Be^{ky}$
+$\rightarrow u(x,y)=De^{k(x+y)}$
+
+
+
+
+\end{document}
