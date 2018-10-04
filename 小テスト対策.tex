@@ -1,0 +1,42 @@
+\documentclass[titlepage,dvipdfmx]{jsarticle}
+\usepackage[final,hiresbb]{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\begin{document}
+\section{9/26のでそうなとこまとめ}
+\subsection{ダランベール解}
+\begin{eqnarray}
+\displaystyle 
+A\frac{\partial^2 \phi}{\partial x^2}+B\frac{\partial^2 \phi}{\partial x \partial y}+C\frac{\partial^2 \phi}{\partial y^2}=0 \nonumber
+\end{eqnarray}
+において、$B^2-4AC>0$の時のみ使える
+\subsection{解法}
+\noindent
+step1...$\zeta=x+mt,\eta =x+nt $と変数変換\\
+step2...$\frac{\partial^2 \phi}{\partial \zeta^2}=\frac{\partial^2 \phi}{\partial \eta^2}=0,\frac{\partial^2 \phi}{\partial \zeta \partial \eta} \!=0$となる値を求める\\
+step...境界条件を用いて$f(\zeta),g(\eta)$を定める
+\subsection{具体例}
+\begin{eqnarray}
+\displaystyle 
+\frac{\partial^2 u}{\partial x^2}-5\frac{\partial^2 u}{\partial x \partial y}+6\frac{\partial^2 u}{\partial y^2}=0 \nonumber
+\end{eqnarray}
+で考える。\\
+step1\\
+$\zeta=x+mｙ,\eta=x+ny$とする
+$\frac{\partial}{\partial x}=\frac{\partial}{\partial \zeta}+\frac{\partial}{\partial \eta},
+\frac{\partial}{\partial y}=m\frac{\partial}{\partial \zeta}+n\frac{\partial}{\partial \eta}$
+とおくと、\\
+\begin{eqnarray}
+\displaystyle
+\left( 1-5m+6m^2 \right) \frac{\partial^2 }{\partial \zeta^2}u+\left( 2-5n-5m+12mn \right) \frac{\partial^2}{\partial \zeta \partial \eta}u+\left( 1-5n+6n^2\right) \frac{\partial^2 }{\partial \eta^2}u \nonumber
+\end{eqnarray}
+step2\\
+$6m^2-5m+1=0 \rightarrow m=\frac{1}{2},\frac{1}{3}\\
+ 6n^2-5n+1=0 \rightarrow n=\frac{1}{2},\frac{1}{3}$
+よって$m=\frac{1}{2},n=\frac{1}{3}$とすると$\zeta=x+\frac{1}{2}y,\eta=x+\frac{1}{3}y$\\
+計数の関係から$\frac{\partial^2}{\partial \zeta \partial\eta}u=0$より、$u=f(\zeta)+g(\eta)=f(x+1/2y)+g(x+1/3y)$\\
+step3 \\
+境界条件使って式を出す！
+
+\end{document}
